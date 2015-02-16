@@ -2,22 +2,345 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="header">
+  <div class="container">
+    <h1>Specializing in Extraordinary</h1>
+    <p class="hidden-xs">
+      BRDDG is a multidisciplinary creative collective building
+      <br>
+      unique digital, print, and interactive solutions.
+    </p>
+    <a class="hidden-xs" id="see-button" href="#services">See What We Can Do For You</a>
+  </div>
 </div>
+
+<div class="info-block" id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Our Services</h2>
+        <p class="hidden-xs">Our tools are varied but our goal is always the same; we help you solve your biggest problems. We bring our expertise in visual communication and our experience of the relationship between behavior, art, and information to develop a bespoke strategy for your needs.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="icon icon-branding"></div>
+        <h4>Branding &amp; Identity</h4>
+        <p class="small">
+          We love building brands, because we love a good story. We’ll make sure you’re speaking with the right voice and use thoughtful design to connect you with your audience.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-dev"></div>
+        <h4>Web &amp; Mobile Development</h4>
+        <p class="small">
+          We get excited about creating delightful user experiences. Whether it’s a website or a native app, we’ll build technology to enhance and broaden the reach of your brand.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-design"></div>
+        <h4>Web, Digital &amp; Print Design</h4>
+        <p class="small">
+          Content is king. We can strategize with you and produce the assets you need to communicate, from social media to full print advertising campaigns. We’ve got you covered.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-video"></div>
+        <h4>Video &amp; Motion Graphics</h4>
+        <p class="small">
+          There is nothing like a compelling video to raise the value of your brand and set you apart in the new digital landscape. We can tell your story, your way.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="image-block hidden-xs" id="image1">
+  <h1>
+    Building Better Web &amp;
+    <br>
+    Mobile applications
+  </h1>
+</div>
+
+<div class="info-block dark-info-block" id="process">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Our Process</h2>
+        <p class="hidden-xs">We believe in using an innovative approach, focusing on collaboration and adaptability. Every project presents its unique challenges to be navigated in order to craft something beautiful. We work alongside you to understand the challenges your business faces, and use our creative intelligence to pioneer a unique solution.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="icon icon-discover"></div>
+        <h4>Discover</h4>
+        <p class="small">
+          Discovering the core needs of the business is the starting point in solving the complete problem.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-plan"></div>
+        <h4>Plan</h4>
+        <p class="small">
+          Laying the foundations of the ‘how’ and ‘what’ enables us to build the right thing, right.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-build"></div>
+        <h4>Build</h4>
+        <p class="small">
+          The hard graft of making it happen. It’s where we thrive and where your vision comes to life.
+        </p>
+      </div>
+      <div class="col-sm-3">
+        <div class="icon icon-deploy"></div>
+        <h4>Deploy</h4>
+        <p class="small">
+          The hand-off is crucial. We ensure you have everything you need to succeed after the work is completed.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info-block" id="work">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Our Work</h2>
+        <p class="hidden-xs">Explore a sampling of some of the clients and friends we have had the privilege of working with. We feel immensely lucky to work with such great people.</p>
+        <img id="ipad" src="/img/work-main.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="gallery">
+  <div class="container">
+    <div class="row">
+
+      {% for client in site.data.clients %}
+        {% if forloop.index < 10 %}
+          {% capture client_no %}{{ '0' }}{{ forloop.index }}{% endcapture %}
+        {% else %}
+          {% assign client_no = forloop.index %}
+        {% endif %}
+
+        <a href="#client_{{ client_no }}" class="client col-sm-3 col-xs-6", data-toggle="modal">
+          <img src="img/work/work_{{ client_no }}.jpg" />
+          <h4 class="hidden-xs">{{ client.name }}</h4>
+          <h6 class="hidden-xs">{{ client.work }}</h6>
+        </a>
+
+        <div class="modal" id="client_{{ client_no }}" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-left">
+                <div class="carousel slide" id="carousel_{{ client_no }}" data-ride="carousel" data-interval="false">
+                  <div class="carousel-inner">
+                    {% for sample in (1..client.samples) %}
+                      {% if sample < 10 %}
+                        {% capture sample_no %}{{ '0' }}{{ forloop.index }}{% endcapture %}
+                      {% else %}
+                        {% assign sample_no = forloop.index %}
+                      {% endif %}
+
+                      {% if sample == 1 %}
+                        <div class="item active">
+                      {% else %}
+                        <div class="item">
+                      {% endif %}
+
+                          <img src="img/work/samples/client_{{ client_no }}_{{ sample_no }}.jpg" />
+
+                        </div>
+                    {% endfor %}
+
+                    {% if client.video == true and client.samples == 0 %}
+                      <div class="item active">
+                        <iframe frameborder="0" src="{{ client.video_link }}"></iframe>
+                      </div>
+                    {% elsif client.video == true %}
+                      <div class="item">
+                        <iframe frameborder="0" src="{{ client.video_link }}"></iframe>
+                      </div>
+                    {% endif %}
+
+                  </div>
+
+                  {% if client.samples > 0 %}
+                    <a href="#carousel_{{ client_no }}" class="left" data-slide="prev">
+                      <span class="icon-previous"></span>
+                    </a>
+                    <a href="#carousel_{{ client_no }}" class="right" data-slide="next">
+                      <span class="icon-next"></span>
+                    </a>
+                  {% endif %}
+                  <a href="#" class="close visible-sm visible-xs" data-dismiss="modal" aria-hidden="true">
+                    <span class="icon-close"></span>
+                  </a>
+
+                </div>
+              </div>
+
+              <div class="modal-right">
+                <div class="title">{{ client.name }}</div>
+                <div class="work">{{ client.work }}</div>
+                <p class="desc">{{ client.description }}</p>
+                <a href="#" class="close hidden-sm hidden-xs" data-dismiss="modal" aria-hidden="true">
+                  <span class="icon-close"></span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+<div class="image-block hidden-xs" id="image2">
+  <h1>
+    Passionate About
+    <br>
+    Your Next Project
+  </h1>
+</div>
+
+<div class="info-block hidden-xs" id="who-we-are">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Who We Are</h2>
+        <p>We are a small group of designers, developers and strategists currently residing in Greenville, South Carolina. We care deeply about excellent craftsmanship and are genuine, all around quite nice people. We have an immense appreciation for beautifully designed things and have a penchant for funding interesting ideas on Kickstarter. Our creative endeavors are fueled by our passionate love of quality coffee.</p>
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="/img/sam.png">
+            <h4>Samuel Claridge</h4>
+            <p class="small">Sam Claridge is a designer, UI/UX specialist, and front-end developer who has led multiple businesses. Originally from England, he often references 90s British comedy.</p>
+            <a class="icon-social icon-twitter-circle" target="_blank" href="http://twitter.com/samuelclaridge"></a>
+            <a class="icon-social icon-insta-circle" target="_blank" href="http://instagram.com/samuelclaridge"></a>
+            <a class="icon-social icon-dribbble-circle" target="_blank" href="http://dribbble.com/samuelclaridge"></a>
+          </div>
+          <div class="col-sm-4">
+            <img src="/img/ben.png">
+            <h4>Benjamin Coleman</h4>
+            <p class="small">Benjamin Coleman has more than 10 years experience in design, video &amp; motion graphics. He enjoys LSU football, the Los Angeles Dodgers, and can type 96 words per minute.</p>
+            <a class="icon-social icon-twitter-circle" target="_blank" href="http://twitter.com/bcoleman"></a>
+            <a class="icon-social icon-insta-circle" target="_blank" href="http://instagram.com/brcoleman"></a>
+            <a class="icon-social icon-dribbble-circle" target="_blank" href="http://dribbble.com/bcoleman"></a>
+          </div>
+          <div class="col-sm-4">
+            <img src="/img/john.png">
+            <h4>John Pinkerton</h4>
+            <p class="small">John Pinkerton is a full stack web developer and iOS developer. His work is often interrupted by his cat, Wendy, who likes to sleep on his keyboard.</p>
+            <a class="icon-social icon-twitter-circle" target="_blank" href="http://twitter.com/johnthepink"></a>
+            <a class="icon-social icon-insta-circle" target="_blank" href="http://instagram.com/johnthepink"></a>
+            <a class="icon-social icon-github" target="_blank" href="http://github.com/johnthepink"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="info-block dark-info-block" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h2>Let's Work Together</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <form action="http://formspree.io/john@brddg.co" id="contact-form" method="post" role="form">
+              <div class="form-group">
+                <label for="name">Name*</label>
+                <input class="form-control" id="name" name="name" type="text">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone*</label>
+                <input class="form-control" id="phone" name="phone" type="phone">
+              </div>
+              <div class="form-group">
+                <label for="email">Email*</label>
+                <input class="form-control" id="email" name="_replyto" type="email">
+              </div>
+              <div class="form-group">
+                <label for="current-website">Current Website</label>
+                <input class="form-control" id="current-website" name="current-website" type="text">
+              </div>
+              <div class="form-group">
+                <label for="project-type">Project Type</label>
+                <div class="dropdown"><span class="old"><select class="form-control" id="project-type" name="project-type">
+                  <option class="label" value="">Choose</option>
+                  <option value="Branding &amp; Identity">Branding &amp; Identity</option>
+                  <option value="Web Design">Web Design</option>
+                  <option value="Print Design">Print Design</option>
+                  <option value="App Design">App Design</option>
+                  <option value="Content Creation">Content Creation</option>
+                  <option value="Video/Motion Graphics">Video/Motion Graphics</option>
+                </select></span><span class="selected">Choose</span><span class="carat"></span><div><ul><li>Branding &amp; Identity</li><li>Web Design</li><li>Print Design</li><li>App Design</li><li>Content Creation</li><li>Video/Motion Graphics</li></ul></div></div>
+              </div>
+              <div class="form-group">
+                <label for="budget">Budget</label>
+                <div class="dropdown"><span class="old"><select class="form-control" id="budget" name="budget">
+                  <option class="label" value="">Choose</option>
+                  <option value="Unsure">Unsure</option>
+                  <option value="1-4">$1,000-$4,000</option>
+                  <option value="5-10">$5,000-$10,000</option>
+                  <option value="10-20">$10,000-$20,000</option>
+                  <option value="20-40">$20,000-$40,000</option>
+                  <option value="40+">$40,000+</option>
+                </select></span><span class="selected">Choose</span><span class="carat"></span><div><ul><li>Unsure</li><li>$1,000-$4,000</li><li>$5,000-$10,000</li><li>$10,000-$20,000</li><li>$20,000-$40,000</li><li>$40,000+</li></ul></div></div>
+                <div class="icon-arrow"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" name="message"></textarea>
+              </div>
+              <input id="next" name="_next" type="hidden" value="//brddg.co?thanks=true">
+              <input id="submit" type="submit">
+              <div class="clearfix"></div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <p class="hidden-xs">We'd love to hear from you about your next project. Lets work together to create something great.</p>
+            <div class="brddg-social">
+                            <a class="icon-container" href="mailto:hello@brddg.co"><span class="icon icon-email-circle"></span>
+              </a>
+
+              <a class="hidden-xs" href="mailto:hello@brddg.co">hello@brddg.co</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="brddg-social">
+                            <a target="_blank" class="icon-container" href="http://twitter.com/brddg"><span class="icon icon-twitter-circle"></span>
+              </a>
+
+              <a target="_blank" class="hidden-xs" href="http://twitter.com/brddg">@brddg</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="brddg-social">
+                            <a target="_blank" class="icon-container" href="http://instagram.com/brddg"><span class="icon icon-insta-circle"></span>
+              </a>
+
+              <a target="_blank" class="hidden-xs" href="http://instagram.com/brddg">@brddg</a>
+              <div class="clearfix"></div>
+            </div>
+            <div class="brddg-social">
+                            <a target="_blank" class="icon-container" href="http://dribbble.com/brddg"><span class="icon icon-dribbble-circle"></span>
+              </a>
+
+              <a target="_blank" class="hidden-xs" href="http://dribbble.com/brddg">dribbble.com/brddg</a>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="hidden-xs" id="map"></div>
