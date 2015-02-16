@@ -1,3 +1,6 @@
+---
+---
+
 form_states = ->
   $('.form-control').blur ->
     if $(@).val() != "" and $(@).val() != "Choose"
