@@ -1,0 +1,105 @@
+input[type='text']
+  font-family: 'ProximaNova-Regular'
+  font-size: 1.3rem
+
+.alert-success
+  font-family: 'BrandonGrotesque-Bold'
+  color: $gold
+  text-transform: uppercase
+  letter-spacing: 1px
+  text-align: center
+  background-color: #fff
+  border-radius: none
+
+  button
+    font-size: 32px
+    opacity: .5
+    color: $gold
+    &:hover
+      color: darken($gold, 10%)
+      opacity: 1
+
+.navbar-default
+  background-color: $off-black
+  color: $off-white
+  border-width: 0
+  border-radius: 0
+  margin-bottom: 0
+  .navbar-toggle
+    border-width: 0
+    background: transparent !important
+    .icon-bar
+      background: $off-white
+      width: 25px
+      height: 4px
+      border-radius: 0
+    &:hover
+      background: transparent
+      .icon-bar
+        background: $gold
+  .navbar-collapse
+    border-width: 0
+    box-shadow: none
+
+  .navbar-brand
+    font-size: 2.4rem
+    color: $off-white
+    &:hover
+      color: $gold
+  .navbar-nav
+    li
+      a
+        @extend h5
+        text-transform: uppercase
+        color: $off-white
+        padding: 15px 20px
+        @media (max-width: 900px)
+          padding: 15px 10px
+        &:hover
+          color: $gold
+      &.gold
+        background: $gold
+        width: 160px
+        text-align: center
+        margin-right: -15px
+        a
+          &:hover
+            background: darken($gold, 10%)
+            color: $off-white
+        @media (max-width: 900px)
+          width: 130px
+        @media (max-width: 767px)
+          background: transparent
+          width: auto
+          text-align: left
+          margin-right: 0
+          a
+            color: $off-white
+            &:hover
+              background: transparent
+              color: $gold
+
+#footer
+  height: 60px
+  width: 100%
+  background: $off-black
+  padding: 25px
+  color: $off-white
+  .pull-left
+    @extend h5
+    @media (max-width: 767px)
+      float: none
+      width: 100%
+      text-align: center
+  .pull-right
+    a
+      color: $off-white
+      font-size: 1.2rem
+      margin-left: 10px
+      &:hover
+        color: $gold
+        text-decoration: none
+
+#thanks
+  margin-bottom: 0
+  display: none
