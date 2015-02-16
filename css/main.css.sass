@@ -1,0 +1,522 @@
+// $rembase = 10px
+$gold:  #B4A569
+$off-black: #212121
+$off-white: #F5F5F5
+
+html
+  font-size: 62.5%
+
+body
+  font-family: 'MuseoSlab-300'
+  font-size: 1.6rem
+  color: $off-black
+
+h1
+  font-family: 'BrandonGrotesque-Black'
+  font-size: 8.4rem
+  letter-spacing: 0.05rem
+  line-height: 96px
+  text-transform: uppercase
+
+h2
+  font-family: 'BrandonGrotesque-Black'
+  font-size: 4.2rem
+  color: $gold
+  letter-spacing: 0.05rem
+  text-transform: uppercase
+  margin-top: 0
+
+h3
+  font-family: 'MuseoSlab-300'
+  font-size: 2.6rem
+  letter-spacing: 0.025rem
+  text-transform: uppercase
+
+h4
+  font-family: 'BrandonGrotesque-Bold'
+  font-size: 1.4rem
+  letter-spacing: 0.05rem
+  text-transform: uppercase
+
+h5
+  font-family: 'BrandonGrotesque-Bold'
+  font-size: 1.2rem
+  letter-spacing: 0.125rem
+  text-transform: uppercase
+
+h6
+  font-family: 'MuseoSlab-300-Italic'
+  font-size: 1.2rem
+
+p
+  font-family: 'MuseoSlab-300'
+  font-size: 1.6rem
+  &.small
+    font-size: 1.3rem
+
+input[type='text']
+  font-family: 'ProximaNova-Regular'
+  font-size: 1.3rem
+
+.alert-success
+  font-family: 'BrandonGrotesque-Bold'
+  color: $gold
+  text-transform: uppercase
+  letter-spacing: 1px
+  text-align: center
+  background-color: #fff
+  border-radius: none
+
+  button
+    font-size: 32px
+    opacity: .5
+    color: $gold
+    &:hover
+      color: darken($gold, 10%)
+      opacity: 1
+
+.navbar-default
+  background-color: $off-black
+  color: $off-white
+  border-width: 0
+  border-radius: 0
+  margin-bottom: 0
+  .navbar-toggle
+    border-width: 0
+    background: transparent !important
+    .icon-bar
+      background: $off-white
+      width: 25px
+      height: 4px
+      border-radius: 0
+    &:hover
+      background: transparent
+      .icon-bar
+        background: $gold
+  .navbar-collapse
+    border-width: 0
+    box-shadow: none
+
+  .navbar-brand
+    font-size: 2.4rem
+    color: $off-white
+    &:hover
+      color: $gold
+  .navbar-nav
+    li
+      a
+        @extend h5
+        text-transform: uppercase
+        color: $off-white
+        padding: 15px 20px
+        @media (max-width: 900px)
+          padding: 15px 10px
+        &:hover
+          color: $gold
+      &.gold
+        background: $gold
+        width: 160px
+        text-align: center
+        margin-right: -15px
+        a
+          &:hover
+            background: darken($gold, 10%)
+            color: $off-white
+        @media (max-width: 900px)
+          width: 130px
+        @media (max-width: 767px)
+          background: transparent
+          width: auto
+          text-align: left
+          margin-right: 0
+          a
+            color: $off-white
+            &:hover
+              background: transparent
+              color: $gold
+
+#header
+  text-align: center
+  height: 700px
+  width: 100%
+  background: transparent image-url('hero.jpg') no-repeat center center
+  background-size: cover
+  @media (max-width: 767px)
+    height: 490px
+  @media (max-width: 400px)
+    height: 187px
+  @media all and (-webkit-min-device-pixel-ratio: 1.5)
+    background: transparent image-url('hero@2x.jpg') no-repeat center center
+    background-size: cover
+  h1
+    color: $gold
+    text-transform: uppercase
+    margin-top: 90px
+    margin-bottom: 20px
+    @media (max-width: 767px)
+      font-size: 4.2rem
+      line-height: 55px
+      padding: 0 20px
+    @media (max-width: 400px)
+      font-size: 3.0rem
+      line-height: 40px
+      margin-top: 30px
+      margin-bottom: 0
+  p
+    font-size: 2.6rem
+    margin-bottom: 20px
+  a
+    @extend h4
+    display: block
+    width: 280px
+    height: 48px
+    padding-top: 15px
+    margin: 0 auto
+    border-radius: 24px
+    color: $off-white
+    text-transform: uppercase
+    background: $gold
+    &:hover
+      text-decoration: none
+      background: darken($gold, 10%)
+
+.info-block
+  text-align: center
+  padding: 80px 0
+  background: white
+  @media (max-width: 400px)
+    padding: 40px 0
+  &.dark-info-block
+    background: $off-black
+    color: $off-white
+  &#work
+    padding-bottom: 0
+    border-bottom: 1px solid #CDCDCD
+    background: $off-white
+    #ipad
+      max-width: 620px
+      margin-top: 40px
+      @media (max-width: 767px)
+        margin-top: 20px
+    @media (max-width: 767px)
+      border-bottom-width: 0
+  .col-sm-3, .col-sm-4
+    margin-top: 40px
+    @media (max-width: 400px)
+      margin-top: 20px
+  .icon
+    font-size: 3.0rem
+    color: $gold
+  h2
+    @media (max-width: 400px)
+      margin-top: 0
+      font-size: 30px
+  p.small
+    @media (max-width: 400px)
+      padding: 0 40px
+  h4
+    color: $gold
+  img
+    width: 100%
+
+.image-block
+  height: 600px
+  padding-top: 200px
+  h1
+    text-align: center
+    color: $gold
+  &#image1
+    background: transparent image-url('image1.jpg') no-repeat center center
+    background-size: cover
+    @media all and (-webkit-min-device-pixel-ratio: 1.5)
+      background: transparent image-url('image1@2x.jpg') no-repeat center center
+      background-size: cover
+  &#image2
+    background: transparent image-url('image2.jpg') no-repeat center center
+    background-size: cover
+    @media all and (-webkit-min-device-pixel-ratio: 1.5)
+      background: transparent image-url('image2@2x.jpg') no-repeat center center
+      background-size: cover
+    h1
+      color: $off-white
+
+  @media (max-width: 1060px)
+    height: 390px
+    padding-top: 125px
+    h1
+      font-size: 5.3rem
+      line-height: 66px
+
+#gallery
+  padding-top: 50px
+  @media (max-width: 767px)
+    padding-top: 0
+  .client
+    display: block
+    text-align: center
+    height: 260px
+    color: $off-black
+    &:hover
+      text-decoration: none
+      img
+        opacity: .8
+    img
+      width: 100%
+    @media (max-width: 1199px)
+      height: 220px
+    @media (max-width: 991px)
+      height: 200px
+    @media (max-width: 767px)
+      padding: 0
+      height: auto
+
+.modal
+  .modal-dialog
+    width: 1170px
+    @media (max-width: 1199px)
+      width: 924px
+    @media (max-width: 991px)
+      width: 750px
+    @media (max-width: 767px)
+      width: 100%
+      margin: 0
+    .modal-content
+      -webkit-box-shadow: none
+      box-shadow: none
+      -webkit-border-radius: 0px
+      -moz-border-radius: 0px
+      border-radius: 0px
+      background: transparent
+      border-width: 0px
+      .modal-left
+        width: 780px
+        height: 600px
+        float: left
+        background: white
+        background: rgba(255,255,255,.85)
+        iframe
+          width: 780px
+          height: 600px
+        a.close
+          display: block
+          position: absolute
+          font-size: 3.2rem
+          opacity: .5
+          top: 10px
+          right: 15px
+          height: 34px
+          color: $off-white
+          text-shadow: none
+          &:hover
+            opacity: 1
+            text-decoration: none
+
+        @media (max-width: 1199px)
+          width: 617px
+          height: 475px
+          iframe
+            width: 617px
+            height: 475px
+        @media (max-width: 991px)
+          width: 750px
+          float: none
+          height: auto
+          iframe
+            width: 750px
+            height: 571px
+        @media (max-width: 767px)
+          width: 100%
+          iframe
+            width: 100%
+        .carousel
+          position: relative
+          a
+            display: block
+            position: absolute
+            bottom: 5px
+            color: $off-white
+            font-size: 3.2rem
+            opacity: .5
+            &.left
+              right: 60px
+            &.right
+              right: 15px
+            &:hover
+              opacity: 1
+              text-decoration: none
+      .modal-right
+        padding: 30px
+        width: 380px
+        height: 600px
+        float: right
+        background: white
+        background: rgba(255,255,255,.85)
+        position: relative
+        @media (max-width: 1199px)
+          width: 297px
+          height: 475px
+        @media (max-width: 991px)
+          width: 750px
+          height: auto
+          float: none
+        @media (max-width: 767px)
+          width: 100%
+        .title
+          @extend h4
+          color: $gold
+          font-size: 2.0rem
+        .work
+          @extend h6
+          border-top: 1px solid $gold
+          border-bottom: 1px solid $gold
+          margin-bottom: 10px
+          padding: 5px 0
+        a.close
+          display: block
+          position: absolute
+          font-size: 3.2rem
+          opacity: .5
+          top: 10px
+          right: 15px
+          color: $gold
+          text-shadow: none
+          &:hover
+            opacity: 1
+            text-decoration: none
+#who-we-are
+  .col-md-10
+    p.small
+      margin-bottom: 20px
+    h4
+      margin-top: 20px
+    .icon-social
+      margin: 0 5px
+      font-size: 2.4rem
+      color: #919191
+      &:hover
+        color: $gold
+        text-decoration: none
+    img
+      width: 100%
+
+#contact
+  @media (max-width: 767px)
+    padding-bottom: 0px
+  .col-md-6
+    margin-top: 50px
+    @media (max-width: 400px)
+      margin-top: 30px
+  form
+    .form-group
+      position: relative
+      &.filled
+        .form-control
+          border-color: $off-white
+        .icon-arrow, #budget, #project-type
+          color: $off-white !important
+      label
+        @extend h6
+        text-align: left
+        display: block
+      .form-control
+        border-radius: 0
+        outline-style: none
+        background: transparent
+        border: 1px solid #464646
+        resize: none
+        width: 100%
+        color: $off-white
+        font-family: 'ProximaNova-Regular'
+        -webkit-box-shadow: none
+        -webkit-appearance: none
+        &:focus
+          border-color: $gold
+        &#budget, &#project-type
+          color: #464646
+      textarea
+        height: 150px
+      .icon-arrow
+        position: absolute
+        z-index: -1
+        right: 10px
+        bottom: 10px
+        font-size: 1.2rem
+        color: #464646
+    #submit
+      @extend h4
+      width: 100%
+      height: 34px
+      background: #464646
+      color: $off-black
+      border: 0
+      float: left
+      padding-top: 5px
+      outline-style: none
+      -webkit-appearance: none
+      border-radius: 0
+      &:hover
+        cursor: default
+      &.available
+        background: $gold
+        color: $off-white
+        &:hover
+          background: #9a8e5a
+          cursor: pointer
+
+  p
+    text-align: left
+    margin-bottom: 20px
+
+  .brddg-social
+    clear: both
+    margin-bottom: 20px
+    @media (max-width: 767px)
+      display: inline-block
+      padding: 0 5px
+    a
+      @extend h4
+      color: $off-white
+      display: block
+      margin-top: 6px
+      margin-left: 10px
+      float: left
+      &:hover
+        text-decoration: none
+        color: $gold
+      &.icon-container
+        margin: 0
+
+
+#map
+  height: 380px
+  width: 100%
+  background: transparent image-url('map.jpg') no-repeat center center
+  background-size: cover
+  @media all and (-webkit-min-device-pixel-ratio: 1.5)
+    background: transparent image-url('map@2x.jpg') no-repeat center center
+    background-size: cover
+
+#footer
+  height: 60px
+  width: 100%
+  background: $off-black
+  padding: 25px
+  color: $off-white
+  .pull-left
+    @extend h5
+    @media (max-width: 767px)
+      float: none
+      width: 100%
+      text-align: center
+  .pull-right
+    a
+      color: $off-white
+      font-size: 1.2rem
+      margin-left: 10px
+      &:hover
+        color: $gold
+        text-decoration: none
+
+#thanks
+  margin-bottom: 0
+  display: none
