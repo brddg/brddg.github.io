@@ -7,8 +7,8 @@ layout: default
   {% assign first_post = site.posts.first %}
 
   <div id="header" style="background-image: url({{ first_post.image }})">
-    <div class="container">
-      <h1>{{ first_post.title }}</h1>
+    <div id="content">
+      <h2>{{ first_post.title }}</h2>
       <a class="header-button" href="{{ first_post.url | prepend: site.baseurl }}">Read Article</a>
     </div>
   </div>
@@ -19,10 +19,12 @@ layout: default
 
         {% for post in site.posts offset: 1 %}
 
-        <a href="{{ post.url | prepend: site.baseurl }}" class="blog-preview col-md-6" style="background-image: url({{ post.image }})">
-          <div class="title">{{ post.title }}</div>
-          <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
-        </a>
+        <div class="blog-preview col-md-6">
+          <a href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{ post.image }})">
+            <h3 class="title">{{ post.title }}</h3>
+            <p class="small date">{{ post.date | date: "%B %-d, %Y" }}</p>
+          </a>
+        </div>
 
         {% endfor %}
 

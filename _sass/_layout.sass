@@ -2,6 +2,23 @@ input[type='text']
   font-family: 'ProximaNova-Regular'
   font-size: 1.3rem
 
+.header-button
+  @extend h4
+  display: inline-block
+  padding: 15px 28px 13px
+  margin: 0 auto
+  border-radius: 24px
+  color: $off-white
+  text-transform: uppercase
+  background: $gold
+  &:hover
+    text-decoration: none
+    background: darken($gold, 10%)
+    color: $off-white
+  &:focus, &:active
+    text-decoration: none
+    color: $off-white
+
 .alert-success
   font-family: 'BrandonGrotesque-Bold'
   color: $gold
