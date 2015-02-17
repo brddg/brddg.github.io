@@ -46,11 +46,12 @@ has_thanks = ->
 
 nav_scroll = ->
   $('ul.nav li a, #see-button').click (e) ->
-    e.preventDefault()
-    target = $(@).attr('href')
-    $('html, body').animate
-      scrollTop: $(target).offset().top
-    , 500, 'easeInOutQuart'
+    unless $(@).hasClass 'external'
+      e.preventDefault()
+      target = $(@).attr('href')
+      $('html, body').animate
+        scrollTop: $(target).offset().top
+      , 500, 'easeInOutQuart'
 
 client_swipe = ->
   $(".carousel-inner").swipe
