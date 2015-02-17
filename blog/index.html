@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div id="blog-index">
+
+  {% assign first_post = site.posts.first %}
+
+  <div id="header">
+    <div class="container">
+      <h1>{{ first_post.title }}</h1>
+      <a class="header-button" href="{{ first_post.url | prepend: site.baseurl }}">Read Article</a>
+    </div>
+  </div>
+
+  <div id="blogs">
+    <div class="container">
+      <div class="row">
+
+        {% for post in site.posts offset: 1 %}
+
+        <a href="{{ post.url | prepend: site.baseurl }}" class="blog-preview col-md-6">
+            <div class="title">{{ post.title }}</div>
+            <div class="date">{{ post.date | date: "%B %-d, %Y" }}</div>
+          </a>
+
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>

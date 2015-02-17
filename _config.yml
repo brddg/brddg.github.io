@@ -8,9 +8,11 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://brddg.co" # the base hostname & protocol for your site
 twitter_username: brddg
 github_username:  brddg
+permalink: /blog/:categories/:year/:month/:day/:title.html
 
 # Build settings
 markdown: kramdown
 
+# Assets settings
 sass:
   style: :compressed
