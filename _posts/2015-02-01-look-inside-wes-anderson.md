@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-image: "http://thecatapi.com/api/images/get?format=src&type=jpg&unique-id=5"
+title:  "Look Inside Wes Anderson's Assymetrical Viral Letterpress"
+image: "http://thecatapi.com/api/images/get?format=src&type=jpg&unique-id=4"
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
