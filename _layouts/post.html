@@ -23,6 +23,13 @@ layout: white-top
     <div class="container">
       <div class="col-md-10 col-md-offset-1">
         {{ content }}
+
+        <div id="share-mobile" class="visible-xs">
+          <h5>Share</h5>
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url}}{{ page.url}}" class="icon-twitter-circle"></a>
+          <a target="_blank" href="http://twitter.com/home?status={{ page.title }} {{ site.url }}{{ page.url }}" class="icon-twitter-circle"></a>
+          <a target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="icon-twitter-circle"></a>
+        </div>
       </div>
     </div>
   </div>
