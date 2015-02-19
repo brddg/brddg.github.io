@@ -19,7 +19,7 @@ layout: default
 
         {% for post in site.posts offset: 1 %}
 
-        <div class="blog-preview col-md-6">
+        <div class="blog-preview col-sm-6">
           <a href="{{ post.url | prepend: site.baseurl }}" style="background-image: url({{ post.image }})">
             <h3 class="title">{{ post.title }}</h3>
             <p class="small date">{{ post.date | date: "%B %-d, %Y" }}</p>
