@@ -1,0 +1,42 @@
+#blog-post
+
+  #header
+    text-align: center
+    .container
+      .col-md-7
+        h2
+          line-height: 6rem
+        p
+          border-bottom: 1px solid #919191
+          padding-bottom: 30px
+
+  #blog-content
+    margin-top: 30px
+    h1, h2, h3, h4, h5, h6, p
+      margin: 0 8.33333333%
+
+    p
+      margin-bottom: 30px
+      line-height: 2.6rem
+      clear: both
+      &.full-image, &.two-images
+        margin-left: 0
+        margin-right: 0
+
+      &.full-image
+        img
+          width: 100%
+
+      &.two-images
+        img
+          width: 48%
+          margin-bottom: 30px
+          &:last-child
+            float: right
+
+    h4
+      padding-top: 10px
+      margin-bottom: 20px
+
+    div.highlight
+      margin: 0 8.33333333% 30px
