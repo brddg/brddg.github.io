@@ -48,10 +48,14 @@ nav_scroll = ->
   $('ul.nav li a, #see-button').click (e) ->
     unless $(@).hasClass 'external'
       e.preventDefault()
-      target = $(@).attr('href')
-      $('html, body').animate
-        scrollTop: $(target).offset().top
-      , 500, 'easeInOutQuart'
+
+      if $('#home').length > 0
+        target = $(@).attr('href')
+        $('html, body').animate
+          scrollTop: $(target).offset().top
+        , 500, 'easeInOutQuart'
+      else
+        window.location = "/"+$(@).attr('href')
 
 client_swipe = ->
   $(".carousel-inner").swipe
