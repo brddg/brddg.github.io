@@ -15,11 +15,11 @@
     <![endif]-->
 
     <div id="thanks" class="alert alert-success alert-dismissable">
-      <button class="close" aria-hidden="true" data-dismiss="alert" type="button">×</button>
+      <button class="close">{'aria-hidden' => 'true', 'data-dismiss' => 'alert', type: 'button'} ×</button>
       Thanks for your inquiry! We will be in touch with you soon.
     </div>
 
-    <!-- {% include header.html %} -->
+    {% include header.html %}
 
     <div id="wrap">
       {{ content }}

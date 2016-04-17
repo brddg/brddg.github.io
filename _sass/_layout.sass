@@ -32,19 +32,52 @@ a.close
     opacity: 1
     text-decoration: none
 
+.header
+  text-align: center
+  color: $real-white
+  padding: 15vh 0 20vh
+  width: 100%
+  // background: transparent url('/img/hero.jpg') no-repeat center center
+  background-size: cover
+  background-color: $orange
+  @media (max-width: 767px)
+    height: 490px
+  @media (max-width: 400px)
+    height: 187px
+  @media all and (-webkit-min-device-pixel-ratio: 1.5)
+    background: transparent url('/img/hero@2x.jpg') no-repeat center center
+    background-size: cover
+  h1
+    margin-bottom: 20px
+    @media (max-width: 767px)
+      font-size: 4.2rem
+      line-height: 55px
+      padding: 0 20px
+    @media (max-width: 400px)
+      font-size: 3.0rem
+      line-height: 40px
+      margin-top: 30px
+      margin-bottom: 0
+  p
+    // font-size: 2.6rem
+    margin-bottom: 20px
+
+
 .header-button
-  @extend h5
+  @extend h4
   display: inline-block
-  padding: 15px 28px 13px
+  padding: 20px 60px
   margin: 0 auto
-  border-radius: 24px
+  border-radius: 200px
   color: $off-white
   text-transform: uppercase
-  background: $gold
+  background: none
+  border: 3px solid $real-white
+  border-radius: 1000px
   &:hover
     text-decoration: none
-    background: darken($gold, 10%)
-    color: $off-white
+    background: $real-white
+    color: $orange
   &:focus, &:active
     text-decoration: none
     color: $off-white
@@ -67,8 +100,8 @@ a.close
       opacity: 1
 
 .navbar-default
-  background-color: $off-black
-  color: $off-white
+  background-color: $real-white
+  color: $off-black
   border-width: 0
   border-radius: 0
   margin-bottom: 0
@@ -142,6 +175,38 @@ a.close
           position: fixed
           font-size: 3.2rem
           z-index: 9999
+
+
+.nav-icons
+  display: block
+  font-size: 4rem
+  padding-bottom: 12px
+
+.nav-block
+  border-top: 1px solid $grey
+  border-bottom: 1px solid $grey
+  text-align: center
+  padding: 30px 0
+  background: white
+  text-transform: uppercase
+
+  .nav-list
+    margin: auto
+    max-width: 70%
+    display: flex
+
+  .nav-list li
+    list-style: none
+    display: inline-block
+    flex-grow: 1
+    a
+      color: $off-black
+      text-decoration: none
+      &:hover, &:active, &:focus
+        color: $light-blue
+
+#hero
+  max-height: 720px
 
 
 #footer
