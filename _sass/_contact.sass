@@ -1,0 +1,103 @@
+#contact
+  h3
+    display: inline-block
+  padding-top: 200px
+  height: 100vh
+  background-color: $light-blue
+  margin-bottom: 0
+  #submit
+    @extend h4
+    display: block
+    margin: 30px auto
+    padding: 10px 60px 11px
+    text-transform: uppercase
+    color: $real-white
+    border: 3px solid $real-white
+    border-radius: 200px
+    &:hover
+      background-color: $real-white
+      color: $light-blue
+      cursor: default
+    &.available
+      background: $gold
+      color: $off-white
+      &:hover
+        background: #9a8e5a
+        cursor: pointer
+  input
+    @extend h3
+    background: none
+    box-shadow: none
+    border: none
+    height: auto
+    border-radius: 0
+    color: $real-white
+    border-bottom: 10px solid $real-white
+  input::-webkit-input-placeholder,
+    color: $dark-blue
+
+.dropdown
+  border: none
+  border-bottom: 10px solid $real-white
+  ul, li
+    @extend h4
+    background-color: $real-white
+    color: $light-blue
+    border: none
+    &:hover
+      background-color: $dark-blue
+    &.active
+      background-color: $light-blue
+
+.dropdown .selected
+  @extend h3
+  color: $real-white
+
+.form-group
+  width: 49%
+  display: inline-block
+
+
+
+//   @media (max-width: 767px)
+//     padding-bottom: 0px
+//   .col-md-6
+//     margin-top: 50px
+//     @media (max-width: 400px)
+//       margin-top: 30px
+//   form
+//     .form-group
+//       position: relative
+//       &.filled
+//         .form-control
+//           border-color: $off-white
+//         .icon-arrow, #budget, #project-type
+//           color: $off-white !important
+//       label
+//         @extend h6
+//         text-align: left
+//         display: block
+//       .form-control
+//         border-radius: 0
+//         outline-style: none
+//         background: transparent
+//         border: 1px solid #464646
+//         resize: none
+//         width: 100%
+//         color: $off-white
+//         font-family: 'ProximaNova-Regular'
+//         -webkit-box-shadow: none
+//         -webkit-appearance: none
+//         &:focus
+//           border-color: $gold
+//         &#budget, &#project-type
+//           color: #464646
+//       textarea
+//         height: 150px
+//       .icon-arrow
+//         position: absolute
+//         z-index: -1
+//         right: 10px
+//         bottom: 10px
+//         font-size: 1.2rem
+//         color: #464646

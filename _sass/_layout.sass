@@ -33,9 +33,13 @@ a.close
     text-decoration: none
 
 .header
+  display: flex
+  flex-direction: column
+  justify-content: center
   text-align: center
   color: $real-white
-  padding: 15vh 0 20vh
+  margin-top: 104px
+  height: 60vh
   width: 100%
   // background: transparent url('/img/hero.jpg') no-repeat center center
   background-size: cover
@@ -44,11 +48,8 @@ a.close
     height: 490px
   @media (max-width: 400px)
     height: 187px
-  @media all and (-webkit-min-device-pixel-ratio: 1.5)
-    background: transparent url('/img/hero@2x.jpg') no-repeat center center
-    background-size: cover
   h1
-    margin-bottom: 20px
+    padding-bottom: 20px
     @media (max-width: 767px)
       font-size: 4.2rem
       line-height: 55px
@@ -58,18 +59,19 @@ a.close
       line-height: 40px
       margin-top: 30px
       margin-bottom: 0
-  p
+  p.intro
     // font-size: 2.6rem
-    margin-bottom: 20px
+    margin-bottom: 30px
 
 
 .header-button
-  @extend h4
+  @extend p.intro
   display: inline-block
-  padding: 20px 60px
+  padding: 10px 60px 11px
   margin: 0 auto
   border-radius: 200px
-  color: $off-white
+  letter-spacing: .1rem
+  color: $real-white
   text-transform: uppercase
   background: none
   border: 3px solid $real-white
@@ -81,6 +83,9 @@ a.close
   &:focus, &:active
     text-decoration: none
     color: $off-white
+
+.info-block
+  margin-bottom: 80px
 
 .alert-success
   font-family: 'BrandonGrotesque-Bold'
@@ -181,20 +186,32 @@ a.close
   display: block
   font-size: 4rem
   padding-bottom: 12px
+  @media (max-width: 767px)
+    font-size: 3rem
 
 .nav-block
-  border-top: 1px solid $grey
-  border-bottom: 1px solid $grey
-  text-align: center
-  padding: 30px 0
-  background: white
-  text-transform: uppercase
-
+  position: fixed
+  z-index: 1
+  top: 0
+  padding: 15px 0
+  width: 100%
+  border-bottom: 2px solid $light-blue
+  background: $real-white
+  @media (max-width: 767px)
+    bottom: 0
+    top: auto
+    border-bottom: none
+    border-top: 2px solid $light-blue
   .nav-list
+    text-align: center
     margin: auto
+    text-transform: uppercase
     max-width: 70%
     display: flex
-
+    @media (max-width: 767px)
+      max-width: 100%
+      padding: 0
+      font-size: 1rem
   .nav-list li
     list-style: none
     display: inline-block
@@ -204,6 +221,10 @@ a.close
       text-decoration: none
       &:hover, &:active, &:focus
         color: $light-blue
+
+
+.current
+  color: $red
 
 #hero
   max-height: 720px

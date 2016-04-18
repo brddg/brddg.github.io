@@ -18,14 +18,14 @@ form_states = ->
 
 form_validate = ->
   $(document).keyup ->
-    if $('#name').val() != "" and $('#phone').val() != "" and $('#email').val() != ""
+    if $('#name').val() != "" and $('#email').val() != ""
       $('#submit').addClass 'available'
     else
       $('#submit').removeClass 'available'
 
 form_submit = ->
   $('#contact-form').submit ->
-    if $('#name').val() != "" and $('#phone').val() != "" and $('#email').val() != ""
+    if $('#name').val() != "" and $('#email').val() != ""
       return true
     else
       return false

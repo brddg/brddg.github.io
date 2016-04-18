@@ -1,112 +1,104 @@
 @font-face {
-  font-family: 'brddg-icons';
-  src:url('/fonts/brddg-icons.eot?tgsyob');
-  src:url('/fonts/brddg-icons.eot?#iefixtgsyob') format('embedded-opentype'),
-    url('/fonts/brddg-icons.woff?tgsyob') format('woff'),
-    url('/fonts/brddg-icons.ttf?tgsyob') format('truetype'),
-    url('/fonts/brddg-icons.svg?tgsyob#brddg-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'brddg-icons';
+    src:url('/fonts/brddg-icons.eot?tyn5h7');
+    src:url('/fonts/brddg-icons.eot?tyn5h7#iefix') format('embedded-opentype'),
+        url('/fonts/brddg-icons.ttf?tyn5h7') format('truetype'),
+        url('/fonts/brddg-icons.woff?tyn5h7') format('woff'),
+        url('/fonts/brddg-icons.svg?tyn5h7#brddg-icons') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  font-family: 'brddg-icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'brddg-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-brddg:before {
-  content: "\e600";
-}
-.icon-branding:before {
-  content: "\e601";
-}
-.icon-dev:before {
-  content: "\e602";
-}
-.icon-design:before {
-  content: "\e603";
+.icon-about:before {
+    content: "\e900";
 }
 .icon-video:before {
-  content: "\e604";
+    content: "\e919";
 }
-.icon-discover:before {
-  content: "\e605";
+.icon-blog:before {
+    content: "\e901";
 }
-.icon-plan:before {
-  content: "\e606";
+.icon-contact:before {
+    content: "\e902";
 }
-.icon-build:before {
-  content: "\e607";
+.icon-work:before {
+    content: "\e903";
 }
-.icon-deploy:before {
-  content: "\e608";
+.icon-brddg:before {
+    content: "\e904";
 }
-.icon-twitter:before {
-  content: "\e609";
+.icon-appleinc:before {
+    content: "\e905";
 }
-.icon-twitter-circle:before {
-  content: "\e60a";
+.icon-cancel-circle:before {
+    content: "\e906";
 }
-.icon-facebook-circle:before {
-  content: "\e61b";
+.icon-checkmark:before {
+    content: "\e907";
 }
-.icon-googleplus-circle:before {
-  content: "\e61c";
+.icon-circle-down:before {
+    content: "\e908";
+}
+.icon-circle-left:before {
+    content: "\e909";
+}
+.icon-circle-right:before {
+    content: "\e90a";
+}
+.icon-circle-up:before {
+    content: "\e90b";
+}
+.icon-cross:before {
+    content: "\e90c";
 }
 .icon-dribbble:before {
-  content: "\e60b";
-}
-.icon-dribbble-circle:before {
-  content: "\e60c";
-}
-.icon-insta:before {
-  content: "\e60d";
-}
-.icon-insta-circle:before {
-  content: "\e60e";
+    content: "\e90d";
 }
 .icon-github:before {
-  content: "\e60f";
+    content: "\e90e";
 }
-.icon-email:before {
-  content: "\e610";
+.icon-instagram:before {
+    content: "\e90f";
 }
-.icon-email-circle:before {
-  content: "\e611";
+.icon-medium:before {
+    content: "\e910";
 }
-.icon-arrow:before {
-  content: "\e612";
+.icon-pausecircle:before {
+    content: "\e911";
 }
-.icon-previous:before {
-  content: "\e613";
+.icon-pause:before {
+    content: "\e912";
 }
-.icon-next:before {
-  content: "\e614";
+.icon-playcircle:before {
+    content: "\e913";
 }
-.icon-close:before {
-  content: "\e615";
+.icon-play:before {
+    content: "\e914";
 }
-.icon-phone-circle:before {
-  content: "\e616";
+.icon-stopcircle:before {
+    content: "\e915";
 }
-.icon-mail-circle:before {
-  content: "\e617";
+.icon-stop:before {
+    content: "\e916";
+}
+.icon-twitter:before {
+    content: "\e917";
 }
 .icon-vimeo:before {
-  content: "\e618";
-}
-.icon-tumblr:before {
-  content: "\e619";
-}
-.icon-apple:before {
-  content: "\e61a";
+    content: "\e918";
 }
