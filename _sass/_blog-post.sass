@@ -1,15 +1,21 @@
 #blog-post
 
   #header
-    padding-top: 30px
+    padding-top: 140px
     text-align: center
     .container
       .col-md-7
-        h2
+        h1
           line-height: 6rem
+          padding-bottom: 10px
+          color: $main-color
         p
-          border-bottom: 1px solid #919191
-          padding-bottom: 30px
+          padding-bottom: 20px
+        .line
+          background: $main-color
+          height: 10px
+          width: 300px
+          margin: auto
 
   #share
     color: $gold
@@ -43,6 +49,9 @@
 
   #blog-content
     margin-top: 30px
+
+    img
+      width: 100%
 
     @media (min-width: 768px)
       h1, h2, h3, h4, h5, h6, p, div.highlight

@@ -1,9 +1,9 @@
 #contact
-  h3
+  h2
     display: inline-block
-  padding-top: 200px
-  height: 100vh
-  background-color: $light-blue
+  padding: 180px 0px 60px
+  height: 100%
+  background-color: $main-color
   margin-bottom: 0
   #submit
     @extend h4
@@ -16,16 +16,16 @@
     border-radius: 200px
     &:hover
       background-color: $real-white
-      color: $light-blue
+      color: $main-color
       cursor: default
     &.available
-      background: $gold
+      background: $main-color
       color: $off-white
       &:hover
         background: #9a8e5a
         cursor: pointer
   input
-    @extend h3
+    @extend h2
     background: none
     box-shadow: none
     border: none
@@ -34,27 +34,30 @@
     color: $real-white
     border-bottom: 10px solid $real-white
   input::-webkit-input-placeholder,
-    color: $dark-blue
+    color: $real-white
+    opacity: .5
+
 
 .dropdown
+  padding-right: 30px
   border: none
   border-bottom: 10px solid $real-white
   ul, li
     @extend h4
     background-color: $real-white
-    color: $light-blue
+    color: $main-color
     border: none
     &:hover
-      background-color: $dark-blue
+      background-color: darken($main-color, 10%)
     &.active
-      background-color: $light-blue
+      background-color: lighten($main-color, 10%)
 
 .dropdown .selected
-  @extend h3
+  @extend h2
   color: $real-white
 
 .form-group
-  width: 49%
+  width: auto
   display: inline-block
 
 

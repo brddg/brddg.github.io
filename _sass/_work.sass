@@ -1,10 +1,26 @@
 #work
 
-#work-header
-  background: $light-blue
 
-  .header-button:hover
-    color: $light-blue
+
+// #work-header
+//   background-image: linear-gradient(rgba(250, 179, 84, 0.8), rgba(250, 179, 84, 0.8)), url('../img/image1@2x.jpg')
+//
+
+#work-header
+  position: relative
+
+#work-header::after
+  content: ""
+  background: $grey url('../img/image1@2x.jpg')
+  background-position: center center
+  background-repeat: no-repeat
+  opacity: 0.5
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: absolute
+  z-index: -1
 
 .work-card
   position: relative
@@ -34,23 +50,52 @@
       p.intro
         margin-bottom: 20px
 
+.work-button
+  @extend p.intro
+  display: inline-block
+  padding: 10px 60px 11px
+  margin: 0 auto
+  border-radius: 200px
+  letter-spacing: .1rem
+  color: $real-white
+  text-transform: uppercase
+  background: none
+  border: 3px solid $real-white
+  border-radius: 1000px
+  &:hover
+    text-decoration: none
+    background: $real-white
+    color: $main-color
+  &:focus, &:active
+    text-decoration: none
+    color: $off-white
+
 
 #wi1
-  h2, .header-button
-    color: $orange
-  .header-button
-    border-color: $orange
+  h2, .work-button
+    color: $blue
+  .work-button
+    border-color: $blue
     &:hover
-      background: $orange
+      background: $blue
       color: $real-white
 
 #wi2
-  h2, .header-button
+  h2, .work-button
     color: $red
-  .header-button
+  .work-button
     border-color: $red
     &:hover
       background: $red
+      color: $real-white
+
+#wi3
+  h2, .work-button
+    color: $orange
+  .work-button
+    border-color: $orange
+    &:hover
+      background: $orange
       color: $real-white
 
 #accolade
@@ -71,7 +116,16 @@
   width: 80%
 
 #ac1
-  background: $grey url('../img/image1.jpg')
+  background: $grey url('../img/jimmy.jpg')
+  background-position: center center
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  background-repeat: no-repeat
+
+#ac2
+  background: $grey url('../img/sally.jpg')
   background-position: center center
   -webkit-background-size: cover
   -moz-background-size: cover

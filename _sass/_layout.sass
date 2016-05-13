@@ -38,12 +38,13 @@ a.close
   justify-content: center
   text-align: center
   color: $real-white
-  margin-top: 104px
+  margin-top: 101px
   height: 60vh
+  min-height: 500px
   width: 100%
   // background: transparent url('/img/hero.jpg') no-repeat center center
   background-size: cover
-  background-color: $orange
+  background-color: $real-white
   @media (max-width: 767px)
     height: 490px
   @media (max-width: 400px)
@@ -79,7 +80,7 @@ a.close
   &:hover
     text-decoration: none
     background: $real-white
-    color: $orange
+    color: $main-color
   &:focus, &:active
     text-decoration: none
     color: $off-white
@@ -185,7 +186,7 @@ a.close
 .nav-icons
   display: block
   font-size: 4rem
-  padding-bottom: 12px
+  padding-bottom: 6px
   @media (max-width: 767px)
     font-size: 3rem
 
@@ -193,15 +194,15 @@ a.close
   position: fixed
   z-index: 1
   top: 0
-  padding: 15px 0
+  padding: 12px 0
   width: 100%
-  border-bottom: 2px solid $light-blue
+  border-bottom: 2px solid $main-color
   background: $real-white
   @media (max-width: 767px)
     bottom: 0
     top: auto
     border-bottom: none
-    border-top: 2px solid $light-blue
+    border-top: 2px solid $main-color
   .nav-list
     text-align: center
     margin: auto
@@ -217,10 +218,11 @@ a.close
     display: inline-block
     flex-grow: 1
     a
+      font-size: 1.2rem
       color: $off-black
       text-decoration: none
       &:hover, &:active, &:focus
-        color: $light-blue
+        color: $main-color
 
 
 .current
@@ -234,7 +236,7 @@ a.close
   height: 60px
   width: 100%
   background: $off-black
-  padding: 25px
+  padding: 25px 25px 50px
   color: $off-white
   .pull-left
     @extend h5

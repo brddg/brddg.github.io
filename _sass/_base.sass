@@ -5,11 +5,16 @@ $off-white: #F5F5F5
 $real-white: #ffffff
 $grey: #919191
 
-$orange: #FAB354
-$light-blue: #54BDFA
-$dark-blue: #1D75AD
-$red: #EC575E
+$orange: rgba(249, 157, 34, 0.75)
+$blue: rgba(34, 170, 249, 0.75)
+$green: rgba(27, 159, 61, 0.75)
+$red: rgba(231, 41, 50, 0.75)
 
+$colors: $orange, $blue, $red, $green
+$key: random( length($colors) )
+$nth: nth( $colors, $key )
+
+$main-color: $nth
 
 html
   font-size: 70%
@@ -21,9 +26,9 @@ body
 
 h1
   font-family: 'ars_maquette_problack'
-  font-size: 8.4rem
+  font-size: 6.2rem
   letter-spacing: 0.05rem
-  line-height: 96px
+  line-height: 7.2rem
 
 h2
   font-family: 'ars_maquette_problack'

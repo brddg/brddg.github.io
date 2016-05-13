@@ -1,22 +1,16 @@
 ---
-layout: white-top
+layout: regular-page
 ---
 <div id="blog-post" class="post">
 
   <div id="header">
     <div class="container">
       <div class="col-md-7 col-md-offset-2-5 col-sm-8 col-sm-offset-2">
-        <h2>{{ page.title }}</h2>
-        <p class="small">{{ page.date | date: "%B %-d, %Y" }}</p>
+        <h1>{{ page.title }}</h1>
+        <p class="small">{{ page.tags }}</p>
+        <div class="line"></div>
       </div>
     </div>
-  </div>
-
-  <div id="share" data-spy="affix">
-    <h5>Share</h5>
-    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url}}{{ page.url}}" class="icon-facebook-circle"></a>
-    <a target="_blank" href="http://twitter.com/home?status={{ page.title }} {{ site.url }}{{ page.url }}" class="icon-twitter-circle"></a>
-    <a target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="icon-googleplus-circle"></a>
   </div>
 
   <div id="blog-content">
@@ -24,12 +18,6 @@ layout: white-top
       <div class="col-md-10 col-md-offset-1">
         {{ content }}
 
-        <div id="share-mobile" class="visible-xs">
-          <h5>Share</h5>
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ site.url}}{{ page.url}}" class="icon-facebook-circle"></a>
-          <a target="_blank" href="http://twitter.com/home?status={{ page.title }} {{ site.url }}{{ page.url }}" class="icon-twitter-circle"></a>
-          <a target="_blank" href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" class="icon-googleplus-circle"></a>
-        </div>
       </div>
     </div>
   </div>
